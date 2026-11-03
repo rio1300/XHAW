@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculate Your Fees | Pawsitive Pet Academy</title>
+<meta name="description" content="Pawsitive Pet Academy offers practical dog training and pet care courses. Caring for Pets &bull; Training for Life.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="fees">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Pawsitive Pet Academy home"><img src="images/logo.png" alt="" width="36" height="40"><span>Pawsitive Pet Academy</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="main-nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="courses.html">Courses</a><a href="fees.html" class=active aria-current=page>Fees</a><a href="contact.html">Contact</a></nav>
+</header>
+<main id="main">
+
+<section class="page-title fade">
+  <h1>CALCULATE YOUR FEES</h1>
+  <p class="sub">Select the courses you wish to enrol in below to estimate your total tuition and available discounts.</p>
+</section>
+<form id="fee-form" class="fee-layout" novalidate>
+  <div class="fee-left">
+    <fieldset class="card fade">
+      <legend class="h">CUSTOMER DETAILS</legend>
+      <label for="fullName">Full Name</label><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="e.g. Sarah Jones">
+      <span class="err" data-for="fullName"></span>
+      <label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 082 123 4567">
+      <span class="err" data-for="phone"></span>
+      <label for="email">Email Address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="e.g. sarah@email.com">
+      <span class="err" data-for="email"></span>
+    </fieldset>
+    <fieldset class="card fade d2">
+      <legend class="h">SELECT YOUR COURSES</legend>
+      <p class="hint">You can select more than one course.</p>
+      <div class="course-opts"><label class="course-opt"><input type="checkbox" name="course" value="canine-obedience" data-fee="1500" data-name="Canine Obedience Training"><span class="nm">Canine Obedience Training</span><span class="pr">R1,500</span></label><label class="course-opt"><input type="checkbox" name="course" value="pet-grooming" data-fee="1500" data-name="Pet Grooming"><span class="nm">Pet Grooming</span><span class="pr">R1,500</span></label><label class="course-opt"><input type="checkbox" name="course" value="animal-behaviour" data-fee="1500" data-name="Animal Behaviour"><span class="nm">Animal Behaviour</span><span class="pr">R1,500</span></label><label class="course-opt"><input type="checkbox" name="course" value="pet-business-management" data-fee="1500" data-name="Pet Business Management"><span class="nm">Pet Business Management</span><span class="pr">R1,500</span></label><label class="course-opt"><input type="checkbox" name="course" value="puppy-care" data-fee="750" data-name="Puppy Care"><span class="nm">Puppy Care</span><span class="pr">R750</span></label><label class="course-opt"><input type="checkbox" name="course" value="pet-first-aid" data-fee="750" data-name="Pet First Aid"><span class="nm">Pet First Aid</span><span class="pr">R750</span></label><label class="course-opt"><input type="checkbox" name="course" value="basic-dog-walking" data-fee="750" data-name="Basic Dog Walking"><span class="nm">Basic Dog Walking</span><span class="pr">R750</span></label></div>
+      <span class="err" data-for="courses"></span>
+      <button type="button" id="calc-btn" class="btn coral pill">Calculate Fees</button>
+    </fieldset>
+  </div>
+  <div class="fee-right">
+    <section class="card summary fade d2" aria-live="polite">
+      <h3>FEE SUMMARY</h3>
+      <div class="cust-box"><span class="lbl">CUSTOMER DETAILS</span><span id="sum-cust">Enter your details above</span></div>
+      <p class="sel-title">SELECTED COURSES (<span id="sum-count">0</span>)</p>
+      <ul id="sum-list" class="sel-list"></ul>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="sum-sub">R0.00</dd></div>
+        <div><dt>Discount (<span id="sum-pct">0</span>%)</dt><dd id="sum-disc">R0.00</dd></div>
+        <div><dt>Amount After Discount</dt><dd id="sum-after">R0.00</dd></div>
+        <div><dt>VAT (15%)</dt><dd id="sum-vat">R0.00</dd></div>
+      </dl>
+      <div class="final"><span>FINAL TOTAL</span><span id="sum-total">R0.00</span></div>
+      <p class="disc-note">Multi-course discount: 2 courses 5% &middot; 3 courses 10% &middot; 4 or more courses 15%.</p>
+      <button type="submit" class="btn coral block">Submit Booking Request</button>
+      <p id="form-msg" class="form-msg" role="status"></p>
+    </section>
+    <div class="btn-stack right-stack fade d3">
+      <a class="btn brown block" href="contact.html">Contact Us</a>
+      <button type="reset" id="reset-btn" class="btn white block">Reset Form</button>
+    </div>
+  </div>
+</form>
+
+</main>
+<footer class="site-footer">
+  <p><strong>Pawsitive Pet Academy</strong> &middot; Caring for Pets &bull; Training for Life</p>
+  <p class="small">&copy; 2026 Pawsitive Pet Academy. Work Integrated Learning project.</p>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/fees.js"></script>
+</body>
+</html>
